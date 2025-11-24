@@ -1,0 +1,71 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: system-ui, -apple-system, Arial, sans-serif; background:#f0f8f0; color:#222; line-height:1.5; }
+header { background:#2e7d32; color:white; text-align:center; padding:25px 15px; }
+header h1 { font-size:1.8rem; margin:0; }
+header p { font-size:1rem; opacity:0.9; }
+
+.container { max-width:100%; padding:15px; margin:0 auto; }
+
+.cards-row { display:flex; flex-wrap:wrap; gap:15px; margin:20px 0; }
+.info-card {
+    background:white; padding:18px; border-radius:12px; box-shadow:0 3px 12px rgba(0,0,0,0.1);
+    flex:1; min-width:260px; text-align:center;
+}
+.info-card .icon { font-size:2.8rem; margin-bottom:8px; }
+.info-card h3 { color:#2e7d32; font-size:1.2rem; margin:10px 0; }
+
+.card { background:white; padding:20px; border-radius:14px; box-shadow:0 3px 15px rgba(0,0,0,0.1); margin:20px 0; }
+h2 { color:#2e7d32; font-size:1.4rem; margin-bottom:15px; text-align:center; }
+
+.btn {
+    background:#2e7d32; color:white; width:100%; padding:16px; border:none; border-radius:10px;
+    font-size:1.2rem; cursor:pointer; margin-top:10px;
+}
+.btn:hover { background:#1b5e20; }
+
+input, select, textarea {
+    width:100%; padding:14px; margin:8px 0; border:1px solid #ccc; border-radius:8px; font-size:1rem;
+}
+textarea { resize:vertical; min-height:100px; }
+
+.foto-preview { max-width:100%; border-radius:10px; margin:15px 0; display:block; }
+
+.cronograma { background:#e8f5e8; padding:18px; border-radius:14px; margin:25px 0; font-size:0.95rem; }
+.dia { background:white; margin:12px 0; padding:15px; border-radius:10px; border-left:6px solid #2e7d32; }
+
+.alert-pc { background:#fff8e1; padding:15px; border-radius:10px; margin:15px 0; font-size:0.95rem; }
+
+footer {
+    background:#2e7d32; color:white; text-align:center; padding:30px 15px; margin-top:50px; font-size:0.9rem;
+}
+footer p { margin:8px 0; }
+
+@media (max-width:480px) {
+    header h1 { font-size:1.6rem; }
+    .info-card { min-width:100%; }
+    .card, .cronograma { padding:18px; }
+    .btn { padding:18px; font-size:1.3rem; }
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 32px;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  z-index: 9999;
+  animation: subir 0.6s ease;
+  font-size: 1rem;
+}
+.toast.success { background: #2e7d32; }
+.toast.error   { background: #c62828; }
+.toast.warn    { background: #ef6c00; }
+
+@keyframes subir {
+  from { bottom: -100px; opacity: 0; }
+  to   { bottom: 30px; opacity: 1; }
+}

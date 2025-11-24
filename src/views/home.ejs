@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Ecoponto Leme SP – Ecoponto e Coleta</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="/css/style.css">
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Portal Ecoponto Leme SP</h1>
+      <p>Ecoponto • Coleta de Lixo • Denúncias rápidas via WhatsApp</p>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="cards-row">
+      <div class="info-card">
+        <div class="icon">Map Pin</div>
+        <h3>Encontre o Ecoponto</h3>
+        <p>Mapa com localização exata do Ecoponto Ribeirão do Meio e horário de funcionamento.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">Calendar</div>
+        <h3>Coleta na sua rua</h3>
+        <p>Confira abaixo os dias e horários da coleta de lixo orgânico no seu bairro.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">WhatsApp</div>
+        <h3>Denuncie em 30 segundos</h3>
+        <p>Tire a foto, preencha 4 campos e envie direto para a Ouvidoria da Prefeitura.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Ecoponto Ribeirão do Meio</h2>
+      <div id="map" style="height: 350px; border-radius: 12px;"></div>
+      <p style="margin-top:15px;"><strong>Endereço:</strong> Final da Av. Sete de Setembro – Ribeirão do Meio<br>
+         <strong>Horário:</strong> Segunda a sábado – 8h às 17h</p>
+    </div>
+
+    <div class="cronograma">
+      <h2 style="text-align:center; color:#2e7d32;">Cronograma de Coleta de Lixo Orgânico</h2>
+
+      <div class="dia">
+        <h3>SEGUNDA • QUARTA • SEXTA</h3>
+        <strong>a partir das 5h:</strong> Jardim Cláudia, Vila Bela Vista, Vila Santa Maria, Vila Santa Rita, Jardim Nova Santa Rita, Conj. Hab. Francisco Coelho, Jardim Eloisa, Jardim Bonsucesso, Jardim Adelina, Jardim Jequitibá, Jardim Ana Lucia, Jardim Quáglia, Jardim Ernesto Esgarboze, Jardim Itamaraty, Jardim São Francisco, Jardim Shangrilá, Jardim Glossklauss, Jardim Ariana, Jardim Lívia, Jardim Berbel, Jardim Juana, Jardim Alvorada, Jardim Nova Era, Jardim Vila Nova, Jardim Anteghini, Vila Blumer, Jardim Renascenta, Jardim Silvana, Jardim Letícia, Jardim Nova Leme, Jardim do Bosque<br><br>
+        <strong>a partir das 16h:</strong> Jardim Capitólio, Vila Bom Jesus, Jardim Amália, Jardim Tufanin
+      </div>
+
+      <div class="dia">
+        <h3>TERÇA • QUINTA • SÁBADO</h3>
+        <strong>a partir das 5h:</strong> Jardim Santa Marta, Jardim Santa Paula, Jardim Isabel Cristina, Jardim Saulo, Jardim Serelepe, Jardim São José, Jardim Eroíse, Vila Bancária, Vila Santo Antônio, Jardim das Palmeiras, Vila São Jorge, Jardim Rocco Lenci, Jardim Primavera, Jardim Governador, Jardim do Parque, Vila Santana, Jardim Eldorado, Parque São Manoel, Jardim São Joaquim, Jardim Alto da Boa Vista, Jardim Alto da Glória, Jardim Casarão, Jardim Presidente, Jardim Imperial<br><br>
+        <strong>a partir das 16h:</strong> Vila São João, Vila Santucci, Vila Joest
+      </div>
+
+      <div class="dia">
+        <h3>SEGUNDA A SÁBADO</h3>
+        <strong>a partir das 16h:</strong> Centro
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Denuncie um problema ambiental</h2>
+      <p>Preencha rapidinho e envie direto para a Prefeitura via WhatsApp!</p>
+      <form id="formDenuncia">
+        <input type="text" id="bairro" placeholder="Bairro" required>
+        <input type="text" id="rua" placeholder="Rua ou referência" required>
+        <select id="tipo" required>
+          <option value="">Selecione o tipo</option>
+          <option>Lixo acumulado</option>
+          <option>Entulho / construção</option>
+          <option>Queimada ilegal</option>
+          <option>Esgoto a céu aberto</option>
+          <option>Outros</option>
+        </select>
+        <textarea id="descricao" placeholder="Descreva o problema..." rows="3" required></textarea>
+        <input type="file" accept="image/*" id="fotoInput">
+        <div id="preview"></div>
+        <button type="button" id="btnEnviar" class="btn">Enviar denúncia por WhatsApp</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Suas denúncias</h2>
+      <div id="listaDenuncias"></div>
+    </div>
+
+  </div>
+  <footer style="background:#2e7d32; color:white; text-align:center; padding:30px 20px; margin-top:50px; font-family:Arial, sans-serif;">
+    <div class="container" style="max-width:1100px; margin:0 auto;">
+      <p style="margin:5px 0; font-size:1.1em;"><strong>Portal Ecoponto – Portal Ambiental de Leme/SP</strong></p>
+      <p style="margin:10px 0; opacity:0.9;">
+        Projeto de Extensão Universitária – Sistemas de informação<br>
+        Anhanguera Leme • Gabriel Turatti • Novembro 2025
+      </p>
+      <p style="margin:15px 0 0; font-size:0.9em; opacity:0.8;">
+        Alinhado à ODS 11 (Cidades e Comunidades Sustentáveis) e ODS 12 (Consumo e Produção Responsáveis)
+      </p>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
