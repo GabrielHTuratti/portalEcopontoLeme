@@ -76,15 +76,15 @@ graph TB
 ```
 leme-ecoponto/
 ├── server.js          # Express server
-├── views/
-│   └── index.ejs      # Template principal
+├── src/
+│   └── views/
+│   │   └── index.ejs      # Template principal
 ├── public/
 │   ├── css/
 │   │   └── style.css  # Estilos mobile-first
 │   └── js/
 │       └── main.js    # Lógica + validações
 ├── package.json       # Dependências
-└── vercel.json        # Config deploy
 ```
 
 ## 🎨 **Prints**
