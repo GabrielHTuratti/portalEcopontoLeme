@@ -129,7 +129,7 @@ if (palavras.length < 10) {
 
 ## 🔗 **Links Úteis**
 
-- [Portal Online](https://leme-ecoponto.vercel.app)
+- [Portal Online](https://portal-ecoponto-leme.vercel.app/)
 - [Código Fonte](https://github.com/GabrielHTuratti/leme-ecoponto)
 - [Prefeitura Leme](https://www.leme.sp.gov.br)
 ---
