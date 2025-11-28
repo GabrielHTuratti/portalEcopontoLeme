@@ -9,9 +9,9 @@ Facilita denúncias de problemas ambientais (com foto), consulta ao ecoponto ofi
 
 | Funcionalidade | Descrição |
 |---------------|-----------|
-| 📍 **Mapa Interativo** | Localização exata do Ecoponto Ribeirão do Meio (Leaflet + OpenStreetMap) |
+| 📍 **Mapa Interativo** | Localização exata do Ecoponto Ribeirão do Meio (Leaflet) |
 | 🗑️ **Cronograma de Coleta** | Dias oficiais por bairro (dados da Prefeitura de Leme) |
-| 📱 **Denúncias Rápidas** | Formulário com validação (mín. 20 palavras) + envio direto pro WhatsApp da Ouvidoria |
+| 📱 **Denúncias Rápidas** | Formulário com validação (mín. 10 palavras) + envio direto pro WhatsApp da Ouvidoria |
 | 📸 **Fotos** | Preview + salvamento local + orientação pro WhatsApp Web |
 | 💾 **Galeria Local** | Histórico de denúncias salvas no navegador (LocalStorage) |
 | 📊 **Mobile-First** | 100% responsivo, otimizado pra celular |
